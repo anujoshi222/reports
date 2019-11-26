@@ -47,7 +47,7 @@ header{
 }
 address{
   position: absolute;
-  left: 50%;
+  left: 43%;
   top: 5px;
   z-index: 10000;
   color: white!important;
@@ -70,6 +70,7 @@ top:0.74em;
     bottom: 0;
     top: 0;
     margin: auto;
+    z-index: -1;
 }
 .waveWrapperInner {
     position: absolute;
@@ -120,11 +121,17 @@ top:0.74em;
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+#t1{
+  z-index: 100000000000;
+}
+.container{
+  margin-top: 25em;
+}
 @keyframes spin { 100% { -webkit-transform: scale(360deg); transform:rotate(360deg); } }
 </style>
 <title>Bug_Report</title>
 <body>
-    <Header class="jumbotron  text-center"><div class="waveWrapper waveAnimation">
+    <Header class="text-center"><div class="waveWrapper waveAnimation">
         
         <div class="waveWrapperInner bgTop">
           <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
@@ -143,7 +150,7 @@ top:0.74em;
             
   
 <div class="container">
-   
+   <div id="t1">
     <h2>Platform Bugs</h2>
     <button type="button" class="btn btn-success" id="download" onclick="exportTableToExcel('id1')">Download Report</button>
     <h4> This includes: </h4>
@@ -156,7 +163,7 @@ top:0.74em;
     <th><nobr>Priority(P)</nobr></th>
     <th><nobr>Status</nobr></th>
       </tr>
-
+    </div>
  
       
     <tr valign='top'>
